@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-image: linear-gradient(45deg, #26d84d, #1f90c5);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
   min-height: 100vh;
 }
 header {
-  font-size: 2rem;
+  font-size: 3rem;
+  padding-top: 2rem;
+  text-transform: uppercase;
 }
 
 header,
@@ -25,17 +28,23 @@ form button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
-  background: white;
+  background: rgb(238, 237, 237);
+}
+form input{
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 form button {
-  color: #ff6f47;
+  color: #26d84d;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 form button:hover {
-  background: #ff6f47;
-  color: white;
+  background: #159c33;
+  color:#f7fffe;
 }
 .todo-container {
   display: flex;
@@ -44,40 +53,45 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  min-width: 40%;
   list-style: none;
 }
 
-.todo {
+.ToDo {
   margin: 0.5rem;
-  background: white;
+  background: rgb(233, 233, 233);
   font-size: 1.5rem;
-  color: black;
+  color: rgb(10, 10, 10);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  border-radius: 10px;
 }
 .filter-todo {
   padding: 1rem;
 }
-.todo li {
+.ToDo li {
   flex: 1;
 }
 
-.trash-btn,
-.complete-btn {
-  background: #ff6f47;
+.trash-button,
+.complete-button {
+  background: #159c33;
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
 }
-.complete-btn {
-  background: rgb(11, 212, 162);
+.trash-button{
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.todo-item {
+.complete-button {
+  background: rgb(37, 54, 212);
+}
+.ToDo-Item {
   padding: 0rem 0.5rem;
 }
 
@@ -115,10 +129,11 @@ select {
   overflow: hidden;
 }
 select {
-  color: #ff6f47;
-  font-family: "Poppins", sans-serif;
+  color: rgb(10, 10, 10);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
   width: 12rem;
+  border-radius: 10px;
 }
 /* Arrow */
 .select::after {
@@ -127,13 +142,9 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background: #159c33;
   cursor: pointer;
   pointer-events: none;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
-}
-*/
